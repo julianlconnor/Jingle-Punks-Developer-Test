@@ -36,20 +36,20 @@ REQUIRED OUTPUT COLUMNS:
 
 
 ## RAILS
-The models in this folder corresponds to the database we created in the SQL section.  Please perform the following tasks and add your work to the ./rails folder:
+The models in this folder correspond to the database we created in the SQL section.  Please perform the following tasks and add your work to the ./rails folder:
 
 1) Create **2** Named Scopes that, when **chained**, can return all 'admins' that live in a specific state.
 Here are some example result sets the scopes should be able to get:
 
 *  Scope1: All of the 'writers'
-*  Scope2: Everyone that lives in 'fl'
-*  Scope1 + Scope1: All of the 'editors' that live in 'ma'
+*  Scope2: Everyone that lives in 'FL'
+*  Scope1 + Scope1: All of the 'editors' that live in 'MA'
 
 2) Add validation on the Address model.  
 
 *  We should only create an Address record if the zip code contains 5 numbers.
 
-3) Write 2 **UNIT** tests to confrim that your validation works.  Those test should...
+3) Write 2 **UNIT** tests to confrim that your validation in Question(2) works.  Those test should...
 
 *  Confirm that **VALID** records **PASS** validation and **CAN** be created.
 *  Confirm that **INVALID** records **FAIL** validation **CANNOT** be created.
