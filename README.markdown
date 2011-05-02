@@ -8,6 +8,10 @@ Over 86% of our markup is haml so it'll be important to get up to speed with ham
 
 *  Convert **./haml/contact.html** into **./haml/contact.html.haml**
 
+ANSWER:
+
+*	haml/**contact.html.haml**
+
 ## SQL
 We're a MySQL shop so this test is MySQL centric.  The './sql/setup.sql' file contains 'creates' and 'inserts' that only work for MySQL databases.  
 Also, though questions (1) & (2) are standard SQL questions, question (3) must be answered for MySQL databases.
@@ -26,14 +30,25 @@ REQUIRED OUTPUT COLUMNS:
 *  role name,
 *  state
 
+ANSWER:
+
+* **writersandeditors.sql**
+
 2) Find the count of all users WITHOUT addresses that are 'writers' and have '9' in their 'first_name' (You can only use the keyword 'SELECT' once):
 
 REQUIRED OUTPUT COLUMNS:
 
 *  'homeless writers'
 
+ANSWER:
+
+*	**homelesswriters.sql**
+
 3) Add indexes that would make the query in question 2 run faster.
 
+ANSWER:
+
+*	**indexes.sql**	
 
 ## RAILS
 The models in this folder correspond to the database we created in the SQL section.  Please perform the following tasks and add your work to the ./rails folder:
@@ -45,21 +60,44 @@ Here are some example result sets the scopes should be able to get:
 *  Scope2: Everyone that lives in 'FL'
 *  Scope1 + Scope1: All of the 'editors' that live in 'MA'
 
+ANSWER:
+
+*	rails/**user.rb**
+
 2) Add validation on the Address model.  
 
 *  We should only create an Address record if the zip code contains 5 numbers.
+
+ANSWER:
+
+*	rails/**address.rb**
 
 3) Write 2 **UNIT** tests to confrim that your validation in Question(2) works.  Those test should...
 
 *  Confirm that **VALID** records **PASS** validation and **CAN** be created.
 *  Confirm that **INVALID** records **FAIL** validation **CANNOT** be created.
 
+ANSWER:
+
+*	rails/test/unit/**address_test.rb**
+
 4) The relationship between Users and Roles is pretty limited.  
 
 *  Update the relationship in 'user.rb' & 'role.rb' to allow a single user to have multiple roles.  
 *  Create any new files you'll need.
 
+ANSWER:
+
+*	rails/**role_user.rb**
+*	rails/**role.rb**
+*	rails/**user.rb**
+*	rails/db/migrate/**create_role_users.rb**
+
 5) Write a data migration script (in Ruby or SQL) that updates the existing records in the database to use the new code you created in Question (4).
+
+ANSWER:
+
+*	rails/lib/tasks/**populateRoleUsers.rake**
 
 
 ## BONUS RUBY QUESTION
@@ -71,3 +109,7 @@ Create a ruby deamon that monitors a domain (ex: www.google.com) in ./ruby .  It
 *  Ping every 5 seconds.  
 *  If the script doesn't get the response it expects, it should email 'admin@google.com'.  
 *  **For Bonus Bonus Points:**  Report the isssue via growl using the 'ruby-growl' gem instead of sending an email.
+
+ANSWER:
+
+*	ruby/**daemon.rb**
