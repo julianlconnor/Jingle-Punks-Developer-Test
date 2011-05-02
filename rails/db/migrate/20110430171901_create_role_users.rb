@@ -4,6 +4,11 @@ class CreateRoleUsers < ActiveRecord::Migration
       t.references :role
       t.references :user
     end
+    
+    # Add indexes on join table
+    add_index :role_users, :role_id
+    add_index :role_users, :user_id
+    
     User.reset_column_information
     Role.reset_column_information
     User.all.each do |user|
