@@ -1,1 +1,1 @@
-SELECT users.id,       users.first_name,       users.last_name,       roles.name,       addresses.state FROM rolesJOIN users ON users.role_id = roles.id JOIN addresses ON addresses.user_id = users.idWHERE roles.name = 'writer' OR roles.name = 'editor'
+SELECT users.id,       users.first_name,       users.last_name,       roles.name,       addresses.state FROM rolesJOIN users ON users.role_id = roles.id JOIN addresses ON addresses.user_id = users.idWHERE roles.name = 'writer' OR roles.name = 'editor'
