@@ -1,0 +1,64 @@
+%html
+  %head
+    %title Jingle Punks | Contact Us
+    %link{:href => "http://www.jinglepunks.com/stylesheets/reset.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+      %link{:href => "http://www.jinglepunks.com/stylesheets/main.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+        %link{:href => "http://www.jinglepunks.com/stylesheets/contact.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
+  %body{:style => "background-color:black; color:white;"}
+    .container950
+      #content
+        #contact_header
+          %img{:alt => "CONTACT - Lets Get In Touch.", :src => "http://www.jinglepunks.com/images/contact_header.gif"}/
+        .info_row
+          .info_box.left
+            %h1 We're Not Like Other Music Companies...
+            %p When you work with us you get the keys to the place. We're here day or night, rain or shine, for any questions, comments or just to chat.
+            %br.clear
+              %hr.thin.gray.forever
+                %h1 Do You Need a Login to the Jingle Player?
+                %p
+                  If you're a client looking for access,
+                  %span#blue_link
+                    %a{:href => "http://www.jinglepunks.com/jingleplayer/users/request_user.php"} fill out this User Request Form
+                  and we'll hook you up!
+                %br.clear
+                  %hr.thin.gray.forever
+                    %br.clear
+                      %p
+                        %span#contact_highlight
+                          JINGLE PUNKS MUSIC, LLC.
+                          %br/
+                      %p
+                        %span#contact_highlight PHONE:
+                        646.478.7472
+                        %br
+                          %span#contact_highlight FAX:
+                          815.301.8273
+          .info_box.right
+            .boxy_form_container
+              #contact_form
+                %form#contactform{:action => "send_contact_email"}
+                  CONTACT US
+                  #contact_warning
+                    *** If you are an active Artist, visit our
+                    %span#white_link
+                      %a{:href => "http://support.jinglepunks.com/"} support forums
+                    rather than asking questions here. You will receive a much faster response. ***
+                  %label
+                    Name
+                    %input.required{:name => "name", :type => "text"}/
+                  %label
+                    Email
+                    %input.required.email{:name => "email", :type => "text"}/
+                  %label
+                    Subject
+                    %input.required{:name => "subject", :type => "text"}/
+                  %label
+                    Message
+                    %textarea.required{:name => "message"}
+                      :preserve
+                        
+                  %input.submit{:style => "width: 100px; float: right;", :type => "submit", :value => "SEND"}
+                    %br.clear
+              #contact_thankyou{:style => "display: none;"}
+                Thanks

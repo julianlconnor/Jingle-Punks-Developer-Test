@@ -5,8 +5,6 @@ require 'ruby-growl'
 # Place daemon code here.
 g = Growl.new "localhost", "ruby-growl",
               ["http notification"]
-              
-# In order for the daemon to work, growl must accept incoming connections
 loop do
   # Ping google every 5 seconds
   begin

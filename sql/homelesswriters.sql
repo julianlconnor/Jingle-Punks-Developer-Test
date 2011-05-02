@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS 'homeless writers' FROM users LEFT JOIN addresses ON addresses.user_id = users.id JOIN roles ON roles.id = users.role_id WHERE addresses.address_1 IS NULL AND roles.name = "writer" AND users.first_name LIKE '%9%'
